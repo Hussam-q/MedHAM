@@ -23,7 +23,7 @@ Normalisation
   All 8 tables are in Third Normal Form (3NF): every non-key attribute depends
   on the primary key, the whole key, and nothing but the key.
   Prompts (judge system prompt, claim extraction prompt, FActScore prompt) are
-  constants defined in labeler.py and documented in prompts_reference.txt.
+  constants defined in labeler.py.
   They are not stored in the DB — the published codebase is the authoritative
   source, and storing them here would repeat constant values with no relational
   purpose (no FK children, no analytical queries over prompt text).
