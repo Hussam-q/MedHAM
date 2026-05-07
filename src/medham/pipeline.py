@@ -78,7 +78,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 load_dotenv()
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "medhallu_eval.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), "medham.db")
 
 # Reproducibility constants — each has a methodological justification.
 MAX_TOKENS = 600
