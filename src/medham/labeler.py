@@ -111,7 +111,7 @@ if _hf_token:
     except Exception:
         pass
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "medhallu_eval.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), "medham.db")
 
 # Thread-safety locks
 _pubmed_semaphore = threading.Semaphore(5)   # NCBI policy: 3 req/s without key, 10 req/s with key
