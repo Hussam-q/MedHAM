@@ -1,0 +1,63 @@
+# MedHallu / MedHAM Evaluation - Python dependencies
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# Python:
+#   3.11+ recommended; this is the version used for the study environment.
+#
+# Reproducibility note:
+#   Versions below are minimum tested versions, not exact lockfile pins.
+#   For strict archival replication, generate a frozen environment with:
+#   pip freeze > requirements-lock.txt
+#
+# Run order:
+#   schema.py -> pipeline.py -> labeler.py -> analysis.ipynb
+
+# Environment
+python-dotenv>=1.0.0          # .env loading for API keys
+
+# Data loading and manipulation
+pandas>=2.0.0                 # tabular data, sampling, exports
+numpy>=1.26.0                 # numerical operations and bootstrap arrays
+
+# HTTP / API calls
+requests>=2.31.0              # CrossRef and PubMed REST APIs
+
+# LLM API clients
+openai>=1.30.0                # GPT-4o, DeepSeek, and Groq OpenAI-compatible APIs
+anthropic>=0.25.0             # Claude Sonnet API
+google-genai>=1.0.0           # Gemini API
+
+# Hugging Face dataset and model loading
+datasets>=2.19.0              # MedHallu source dataset loading
+huggingface-hub>=0.23.0       # model and dataset hub access
+
+# NLP / evaluation models
+transformers>=4.40.0          # BioBERT and PubMedBERT-MedNLI loading
+torch>=2.2.0                  # PyTorch backend for transformer inference
+bert-score>=0.3.13            # BioBERT precision/recall/F1 scoring
+
+# Statistical analysis
+scipy>=1.13.0                 # statistical tests and distributions
+statsmodels>=0.14.2           # regression models and proportion confidence intervals
+scikit-learn>=1.5.0           # ROC/AUC and classification utilities
+pingouin>=0.5.4               # effect sizes and reliability statistics
+
+# Visualisation
+matplotlib>=3.9.0             # static figures
+seaborn>=0.13.2               # statistical visualisation
+plotly>=5.22.0                # interactive figures and dashboard views
+
+# Notebook environment
+notebook>=7.2.0               # Jupyter Notebook server
+jupyterlab>=4.2.0             # JupyterLab interface
+ipykernel>=6.29.0             # Python kernel for notebooks
+ipywidgets>=8.1.0             # interactive notebook widgets
+nbconvert>=7.16.0             # notebook export to HTML/PDF
+
+# Code quality and tests
+ruff>=0.4.0                   # linting and formatting
+mypy>=1.10.0                  # static type checking
+pytest>=8.2.0                 # unit tests
+pytest-asyncio>=0.23.0        # async test support
