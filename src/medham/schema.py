@@ -7,7 +7,7 @@ Controlled by TEST_MODE:
   True  — 10-item stratified pilot (use to verify the full pipeline end-to-end
            before committing API budget to the full study).
   False — full pqa_labeled dataset (all human-verified items).
-  Flip the flag, delete medhallu_eval.db, and re-run to switch modes.
+  Flip the flag, delete medham.db, and re-run to switch modes.
 
 Table creation order (logical dependency — lookup → fact → derived)
   models             all models used in ANY role (tested + judge-only)
@@ -69,7 +69,7 @@ PILOT_N     = 10     # number of items when TEST_MODE = True
 # _FS_ACCURATE_THRESHOLD before committing API budget to the full run.
 RANDOM_SEED = 42     # fixed seed for reproducibility — document in methodology
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "medhallu_eval.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), "medham.db")
 
 def create_tables(conn: sqlite3.Connection) -> None:
     cur = conn.cursor()
